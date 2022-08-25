@@ -11,6 +11,9 @@
 		C912570628B7B17D0094A8EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C912570528B7B17D0094A8EB /* ContentView.swift */; };
 		C912570828B7B17F0094A8EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C912570728B7B17F0094A8EB /* Assets.xcassets */; };
 		C912570B28B7B17F0094A8EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C912570A28B7B17F0094A8EB /* Preview Assets.xcassets */; };
+		C912571328B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C912571128B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodeld */; };
+		C912571528B7B2850094A8EB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C912571428B7B2850094A8EB /* Persistence.swift */; };
+		C912571728B7B4B80094A8EB /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C912571628B7B4B80094A8EB /* AddCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		C912570528B7B17D0094A8EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C912570728B7B17F0094A8EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C912570A28B7B17F0094A8EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C912571228B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataSwiftUI4.xcdatamodel; sourceTree = "<group>"; };
+		C912571428B7B2850094A8EB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		C912571628B7B4B80094A8EB /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				C912570328B7B17D0094A8EB /* CoreDataSwiftUI4App.swift */,
 				C912570528B7B17D0094A8EB /* ContentView.swift */,
+				C912571628B7B4B80094A8EB /* AddCategoryView.swift */,
+				C912571128B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodeld */,
+				C912571428B7B2850094A8EB /* Persistence.swift */,
 				C912570728B7B17F0094A8EB /* Assets.xcassets */,
 				C912570928B7B17F0094A8EB /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C912571328B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodeld in Sources */,
+				C912571528B7B2850094A8EB /* Persistence.swift in Sources */,
 				C912570628B7B17D0094A8EB /* ContentView.swift in Sources */,
+				C912571728B7B4B80094A8EB /* AddCategoryView.swift in Sources */,
 				C912570428B7B17D0094A8EB /* CoreDataSwiftUI4App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +351,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C912571128B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C912571228B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodel */,
+			);
+			currentVersion = C912571228B7B1C40094A8EB /* CoreDataSwiftUI4.xcdatamodel */;
+			path = CoreDataSwiftUI4.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C91256F828B7B17D0094A8EB /* Project object */;
 }
