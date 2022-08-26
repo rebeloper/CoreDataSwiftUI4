@@ -16,13 +16,24 @@ struct ContentView: View {
         animation: .default)
     private var categories: FetchedResults<Category>
     
+    @State private var searchQuery = ""
+    
     var body: some View {
         List {
             ForEach(categories) { category in
-                Text(category.value ?? "")
+                NavigationLink {
+                    let itemsFetchRequest = FetchRequest<Item>(sortDescriptors: [NSSortDescriptor(keyPath: \Item.value, ascending: true)], predicate: NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(Item.categories), category), animation: .default)
+                    CategoryView(category: category, items: itemsFetchRequest)
+                } label: {
+                    Text(category.value ?? "")
+                }
             }
             .onDelete(perform: delete(offsets:))
         }
+        .searchable(text: $searchQuery)
+        .onChange(of: searchQuery, perform: { newValue in
+            categories.nsPredicate = searchPredicate(query: newValue)
+        })
         .navigationTitle("Categories")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -49,6 +60,11 @@ struct ContentView: View {
                 }
             }
         }
+    }
+    
+    private func searchPredicate(query: String) -> NSPredicate? {
+        if query.isEmpty { return nil }
+        return NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(Category.value), query)
     }
 }
 
